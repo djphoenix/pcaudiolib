@@ -1,0 +1,19 @@
+/* config.h.in.  Generated from configure.ac by autoheader.  */
+
+/* Do we have ALSA */
+#cmakedefine HAVE_ALSA_ASOUNDLIB_H
+
+/* Do we have coreaudio? */
+#cmakedefine HAVE_COREAUDIO_H
+
+/* Do we have pulse/simple.h */
+#cmakedefine HAVE_PULSE_SIMPLE_H
+
+/* Define to 1 if you have the <sys/asoundlib.h> header file. */
+#cmakedefine HAVE_SYS_ASOUNDLIB_H
+
+/* Define to 1 if you have the <sys/asound.h> header file. */
+#cmakedefine HAVE_SYS_ASOUND_H
+
+/* Define to 1 if you have the <sys/soundcard.h> header file. */
+#cmakedefine HAVE_SYS_SOUNDCARD_H
