@@ -38,7 +38,7 @@ struct xaudio2_object
 class VoiceCallbacks : public IXAudio2VoiceCallback
 {
 public:
-	void OnBufferEnd(void* pBufferContext) {
+	void __stdcall OnBufferEnd(void* pBufferContext) {
 		if (pBufferContext != NULL)
 		{
 			free((void*)pBufferContext);
@@ -46,12 +46,12 @@ public:
 	}
 
 	// Stubs for all interface callbacks
-	void OnStreamEnd() { }
-	void OnVoiceProcessingPassEnd() { }
-	void OnVoiceProcessingPassStart(UINT32 SamplesRequired) { }
-	void OnBufferStart(void* pBufferContext) { }
-	void OnLoopEnd(void* pBufferContext) { }
-	void OnVoiceError(void* pBufferContext, HRESULT Error) { }
+	void __stdcall OnStreamEnd() { }
+	void __stdcall OnVoiceProcessingPassEnd() { }
+	void __stdcall OnVoiceProcessingPassStart(UINT32 SamplesRequired) { }
+	void __stdcall OnBufferStart(void* pBufferContext) { }
+	void __stdcall OnLoopEnd(void* pBufferContext) { }
+	void __stdcall OnVoiceError(void* pBufferContext, HRESULT Error) { }
 } voiceCallbacks;
 
 void

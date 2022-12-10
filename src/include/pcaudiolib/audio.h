@@ -82,33 +82,45 @@ enum audio_object_format
 
 struct audio_object;
 
+#ifndef PCAUDIOLIB_EXPORT
+#define PCAUDIOLIB_EXPORT 
+#endif
+
+PCAUDIOLIB_EXPORT
 int
 audio_object_open(struct audio_object *object,
                   enum audio_object_format format,
                   uint32_t rate,
                   uint8_t channels);
 
+PCAUDIOLIB_EXPORT
 void
 audio_object_close(struct audio_object *object);
 
+PCAUDIOLIB_EXPORT
 void
 audio_object_destroy(struct audio_object *object);
 
+PCAUDIOLIB_EXPORT
 int
 audio_object_write(struct audio_object *object,
                    const void *data,
                    size_t bytes);
 
+PCAUDIOLIB_EXPORT
 int
 audio_object_drain(struct audio_object *object);
 
+PCAUDIOLIB_EXPORT
 int
 audio_object_flush(struct audio_object *object);
 
+PCAUDIOLIB_EXPORT
 const char *
 audio_object_strerror(struct audio_object *object,
                       int error);
 
+PCAUDIOLIB_EXPORT
 struct audio_object *
 create_audio_device_object(const char *device,
                            const char *application_name,
